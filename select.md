@@ -1,3 +1,4 @@
+```
 (gdb) bt
 #0  sub_select (join=0x7fff6892d620, qep_tab=0x7fff6892da88, end_of_records=false)
     at /home/dinosaur/Downloads/mysql-5.7.21/sql/sql_executor.cc:1212
