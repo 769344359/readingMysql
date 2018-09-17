@@ -12,6 +12,8 @@ http://www.cnblogs.com/jackhub/p/3830683.html
 https://yq.aliyun.com/articles/55859
 
 https://www.bbsmax.com/A/qVdeYEjAdP/
+
+http://mysql.taobao.org/monthly/2015/05/01/
 ```
 #0  btr_cur_optimistic_insert (flags=0, cursor=0x7f77b49fee70, offsets=0x7f77b49fee20, heap=0x7f77b49fee18, entry=0x7f77480230e0, rec=0x7f77b49fee28, big_rec=0x7f77b49fee10, n_ext=0, 
     thr=0x7f774801b118, mtr=0x7f77b49ff290) at /home/dinosaur/Downloads/mysql-5.7.21/storage/innobase/btr/btr0cur.cc:3065
