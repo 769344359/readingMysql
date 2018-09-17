@@ -1,3 +1,6 @@
+今天下午要看 这个函数`page_cur_insert_rec_low`  
+这个貌似是redo log 的函数:`page_cur_insert_rec_write_log`
+
 http://mysql.taobao.org/monthly/2015/07/05/
 
 https://blog.csdn.net/jh993627471/article/details/79239720
