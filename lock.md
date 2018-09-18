@@ -78,3 +78,18 @@ btr_cur_search_to_nth_level (index=0x7f7748023b20, level=0, tuple=0x7f77480230e0
 (gdb) 
 
 ```
+
+```
+/* Basic lock modes */
+enum lock_mode {
+LOCK_IS = 0,     /* intention shared */
+LOCK_IX,     /* intention exclusive */
+LOCK_S,          /* shared */
+LOCK_X,          /* exclusive */
+LOCK_AUTO_INC,     /* locks the auto-inc counter of a table
+in an exclusive mode */
+LOCK_NONE,     /* this is used elsewhere to note consistent read */
+LOCK_NUM = LOCK_NONE, /* number of lock modes */
+LOCK_NONE_UNSET = 255
+};
+```
