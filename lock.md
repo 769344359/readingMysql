@@ -127,3 +127,152 @@ LOCK_NONE_UNSET = 255
 #21 0x00007f77d21a341d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:109
 
 ```
+
+index 结构
+```
+$112 = (const dict_index_t *) 0x7f7748023b20
+(gdb) p *index
+$113 = {
+  id = 41, 
+  heap = 0x7f7748023988, 
+  name = {
+    m_name = 0x7f7748023e20 "PRIMARY"
+  }, 
+  table_name = 0x7f77480107d8 "test/test", 
+  table = 0x7f7748022420, 
+  space = 23, 
+  page = 3, 
+  merge_threshold = 50, 
+  type = 3, 
+  trx_id_offset = 4, 
+  n_user_defined_cols = 1, 
+  allow_duplicates = 0, 
+  nulls_equal = 0, 
+  disable_ahi = 0, 
+  n_uniq = 1, 
+  n_def = 4, 
+  n_fields = 4, 
+  n_nullable = 1, 
+  cached = 1, 
+  to_be_dropped = 0, 
+  online_status = 0, 
+  uncommitted = 0, 
+  magic_n = 76789786, 
+  fields = 0x7f7748023e28, 
+  parser = 0x0, 
+  is_ngram = false, 
+  has_new_v_col = false, 
+  index_fts_syncing = false, 
+  indexes = {
+    prev = 0x0, 
+    next = 0x0
+  }, 
+  search_info = 0x7f7748023ed8, 
+  online_log = 0x0, 
+  stat_n_diff_key_vals = 0x7f7748023ec0, 
+  stat_n_sample_sizes = 0x7f7748023ec8, 
+  stat_n_non_null_key_vals = 0x7f7748023ed0, 
+  stat_index_size = 1, 
+  stat_n_leaf_pages = 1, 
+  last_ins_cur = 0x0, 
+  last_sel_cur = 0x0, 
+  rec_cache = {
+    rec_size = 0, 
+    offsets = 0x0, 
+    sz_of_offsets = 0, 
+    fixed_len_key = false, 
+    offsets_cached = false, 
+    key_has_null_cols = false
+  }, 
+  rtr_ssn = {
+    mutex = {
+      m_impl = {
+        m_lock_word = 0, 
+        m_waiters = 0, 
+        m_event = 0x0, 
+        m_policy = {
+          <MutexDebug<TTASEventMutex<GenericPolicy> >> = {
+            _vptr.MutexDebug = 0x0, 
+---Type <return> to continue, or q <return> to quit---
+            m_magic_n = 0, 
+            m_context = {
+              <latch_t> = {
+                _vptr.latch_t = 0x0, 
+                m_id = LATCH_ID_NONE, 
+                m_rw_lock = false, 
+                m_temp_fsp = false
+              }, 
+              members of MutexDebug<TTASEventMutex<GenericPolicy> >::Context: 
+              m_mutex = 0x0, 
+              m_filename = 0x0, 
+              m_line = 0, 
+              m_thread_id = 0
+            }
+          }, 
+          members of GenericPolicy<TTASEventMutex<GenericPolicy> >: 
+          m_count = {
+            m_spins = 0, 
+            m_waits = 0, 
+            m_calls = 0, 
+            m_enabled = false
+          }, 
+          m_id = LATCH_ID_NONE
+        }
+      }, 
+      m_ptr = 0x0
+    }, 
+    seq_no = 0
+  }, 
+  rtr_track = 0x0, 
+  trx_id = 0, 
+  zip_pad = {
+    mutex = 0x0, 
+    pad = 0, 
+    success = 0, 
+    failure = 0, 
+    n_rounds = 0, 
+    mutex_created = 0
+  }, 
+  lock = {
+    <latch_t> = {
+      _vptr.latch_t = 0x2dd8870 <vtable for rw_lock_t+16>, 
+      m_id = LATCH_ID_INDEX_TREE, 
+      m_rw_lock = true, 
+      m_temp_fsp = false
+    }, 
+    members of rw_lock_t: 
+    lock_word = 536870912, 
+    waiters = 0, 
+    recursive = false, 
+    sx_recursive = 0, 
+    writer_is_wait_ex = false, 
+    writer_thread = 140151124637440, 
+    event = 0x7f77480238c8, 
+    wait_ex_event = 0x7f7748024408, 
+    cfile_name = 0x2425ba0 "/home/dinosaur/Downloads/mysql-5.7.21/storage/innobase/dict/dict0dict.cc", 
+    last_s_file_name = 0x240a138 "/home/dinosaur/Downloads/mysql-5.7.21/storage/innobase/btr/btr0cur.cc", 
+    last_x_file_name = 0x242cdc8 "/home/dinosaur/Downloads/mysql-5.7.21/storage/innobase/dict/dict0stats.cc", 
+    cline = 2685, 
+    is_block_lock = 0, 
+    last_s_line = 1008, 
+---Type <return> to continue, or q <return> to quit---
+    last_x_line = 1932, 
+    count_os_wait = 0, 
+    list = {
+      prev = 0x7f7748012098, 
+      next = 0x56928a8
+    }, 
+    pfs_psi = 0x7f77cd44d940, 
+    magic_n = 22643, 
+    debug_list = {
+      count = 0, 
+      start = 0x0, 
+      end = 0x0, 
+      node = &rw_lock_debug_t::list, 
+      init = 51966
+    }, 
+    level = SYNC_INDEX_TREE
+  }
+}
+
+```
