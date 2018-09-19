@@ -317,3 +317,7 @@ lock 堆栈打印
 #25 0x00007f77d21a341d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:109
 
 ```
+```
+# define rw_lock_x_lock(M)					\
+	pfs_rw_lock_x_lock_func((M), 0, __FILE__, __LINE__)
+```
