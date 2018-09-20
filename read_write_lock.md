@@ -20,6 +20,8 @@ https://www.intel.com/content/www/us/en/architecture-and-technology/64-ia-32-arc
 pdf 的283页 一共有三页讲述cmpxchg 指令  
 
 
+https://stackoverflow.com/questions/15017659/how-to-read-the-intel-opcode-notation
+
 
 cas 指令
 
