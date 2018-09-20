@@ -13,6 +13,13 @@ whereas, in the case of AT&T, the general format is
 ```
 mnemonic	source, destination
 ```
+at&t 的语法会是 源操作数(source) 在前面,目的操作数(destination)在后面;而对于intel的汇编语法,则是相反
+
+##### cmpxchg 指令
+https://www.intel.com/content/www/us/en/architecture-and-technology/64-ia-32-architectures-software-developer-vol-2a-manual.html  
+pdf 的283页 一共有三页讲述cmpxchg 指令  
+
+
 
 cas 指令
 
