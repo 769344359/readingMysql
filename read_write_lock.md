@@ -115,6 +115,34 @@ rw_lock_x_lock_low(
 }
 ```
 
+> 解锁
+
+- 写锁解锁
+```
+/******************************************************************//**
+Releases an exclusive mode lock. */
+UNIV_INLINE
+void
+rw_lock_x_unlock_func(
+/*==================*/
+#ifdef UNIV_DEBUG
+	ulint		pass,	/*!< in: pass value; != 0, if the lock may have
+				been passed to another thread to unlock */
+#endif /* UNIV_DEBUG */
+	rw_lock_t*	lock)	/*!< in/out: rw-lock */
+{
+	 ...
+	if (lock->lock_word == 0 || lock->lock_word == -X_LOCK_HALF_DECR) {
+		/* There is 1 x-lock */
+		/* atomic increment is needed, because it is last */
+		if (rw_lock_lock_word_incr(lock, X_LOCK_DECR) <= 0) {    // 写锁 cas添加  , 解锁
+			ut_error;
+		}
+	 ...
+```
+
+
+
 整个堆栈
 ```
 (gdb) bt
